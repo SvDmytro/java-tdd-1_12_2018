@@ -7,7 +7,7 @@ import java.util.List;
 
 public class Publisher {
 
-  List<Subscriber> subscribers = new ArrayList<>();
+  private List<Subscriber> subscribers = new ArrayList<>();
 
     public Publisher() {
     }

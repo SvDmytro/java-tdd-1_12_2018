@@ -6,7 +6,9 @@ import spock.lang.Specification
 
 class PublisherSpec extends Specification {
   def pub = new Publisher()
-  def sub1 = Mock(Subscriber)
+  def sub1 = Mock(Subscriber) {
+    getNumber() >> 1
+  }
   def sub2 = Mock(Subscriber)
 
   def setup() {
