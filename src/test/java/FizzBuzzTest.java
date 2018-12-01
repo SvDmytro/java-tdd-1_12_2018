@@ -14,6 +14,13 @@ public class FizzBuzzTest {
   }
 
   @Test
+  public void ifInputIs0ShouldReturn0() {
+    String result = fizzBuzz.convert(0);
+
+    assertEquals("not return fizzbuzz", "fizzbuzz", result);
+  }
+
+  @Test
   public void ifInputIsOneShouldReturnOne() {
     String result = fizzBuzz.convert(1);
 
