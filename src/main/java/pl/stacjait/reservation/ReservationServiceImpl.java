@@ -1,4 +1,4 @@
-package pl.stacjait.reservation.services;
+package pl.stacjait.reservation;
 
 public class ReservationServiceImpl implements ReservationService {
 

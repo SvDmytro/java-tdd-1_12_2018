@@ -1,4 +1,4 @@
-package pl.stacjait.reservation.services;
+package pl.stacjait.reservation;
 
 public interface ReservationService {
 

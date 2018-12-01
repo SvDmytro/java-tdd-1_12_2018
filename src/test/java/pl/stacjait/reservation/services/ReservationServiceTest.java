@@ -1,8 +1,9 @@
 package pl.stacjait.reservation.services;
 
-import org.assertj.core.api.Assertions;
 import org.junit.Before;
 import org.junit.Test;
+import pl.stacjait.reservation.ReservationService;
+import pl.stacjait.reservation.ReservationServiceImpl;
 
 import static org.assertj.core.api.Assertions.*;
 
