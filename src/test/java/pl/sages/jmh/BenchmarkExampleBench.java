@@ -50,6 +50,9 @@ public class BenchmarkExampleBench {
         bh.consume(copy);
     }
 
+    /**
+     * Wykonaj tą metodą aby uruchomić testy
+     */
     public static void main(String[] args) throws Exception {
         org.openjdk.jmh.Main.main(args);
     }
