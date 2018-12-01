@@ -2,18 +2,22 @@ package pl.stacjait.reservation.services;
 
 public class RestaurantService {
 
-  private ReservationService reservationService;
+    private ReservationService reservationService;
 
-  public RestaurantService(ReservationService reservationService) {
-    this.reservationService = reservationService;
-  }
+    public RestaurantService(ReservationService reservationService) {
+        this.reservationService = reservationService;
+    }
 
-  public void freeTable() {
-    reservationService.releaseTable();
-  }
+    /**
+     * Metoda zwalnia table a następnia zwraca ile aktualnie jest wolnych stolików.
+     * @return
+     */
+    public int freeTable() {
+        reservationService.releaseTable();
+        // tutaj jakaś bogata logika biznesowa i wywołania wielu serwisów...
+        // ale reservationService nam przeszkadza więc jego mockujemy.
+        return reservationService.getNumberOfAvailableTables();
+    }
 
-  public int getNumberOfTables() {
-    return reservationService.getNumberOfAvailableTables();
-  }
 
 }
