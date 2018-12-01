@@ -1,10 +1,16 @@
 public class FizzBuzz {
 
+  final static String FIZZ = "fizz";
+  final static String BUZZ = "buzz";
+
   public String convert(int in){
+    if (in % 3 == 0 && in % 5 == 0){
+      return FIZZ + BUZZ;
+    }
     if (in % 3 == 0) {
-      return "fizz";
+      return FIZZ;
     } else if (in % 5 == 0) {
-      return "buzz";
+      return BUZZ;
     }
     return String.valueOf(in);
   }
