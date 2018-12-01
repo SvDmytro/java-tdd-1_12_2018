@@ -4,7 +4,7 @@ public class FizzBuzz {
   final static String BUZZ = "buzz";
 
   public String convert(int in){
-    if (in % 3 == 0 && in % 5 == 0){
+    if (in % 15 == 0){
       return FIZZ + BUZZ;
     }
     if (in % 3 == 0) {
