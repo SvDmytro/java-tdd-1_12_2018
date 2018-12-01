@@ -1,0 +1,43 @@
+[credential]
+	helper = cache --timeout=3600000
+[user]
+	name = Arkadiusz Cacko
+	email = cackoarek@gmail.com
+[push]
+	default = simple
+[core]
+	autocrlf = input
+[alias]
+  aa = add --all
+  m = merge
+    ml = merge -
+  c = checkout
+    cb = checkout -b
+    cp = cherry-pick
+    cl = checkout -
+  df = diff
+  l = log
+    lfl = log --format=full
+    lflt = log --format=full --tags --decorate=full
+    lf = log --name-only
+    lpd = "log --pretty=format:'%C(Yellow)%h %C(bold Cyan)%<(19)%an %ad %C(bold Cyan)%cd %Creset%s' --date=format:'%m-%dT%H:%M'"
+    lp = "log --pretty=format:'%C(Yellow)%h %C(bold Cyan)%<(19)%an %Creset%s' --date=format:'%m-%dT%H:%M'"
+  b = branch
+    br = branch --remote
+  f = fetch --prune --tags
+  fa = fetch --all
+  pl = !git pull origin $(git rev-parse --abbrev-ref HEAD)
+    pls = !git pull origin $(git rev-parse --abbrev-ref HEAD) --recurse-submodules
+    plr = !git pull --rebase origin $(git rev-parse --abbrev-ref HEAD)
+  ps = !git push origin $(git rev-parse --abbrev-ref HEAD)
+   fps = !git push origin +$(git rev-parse --abbrev-ref HEAD)
+  dbr = "!for b in $(git branch --merged | grep -v '*'); do git branch -d $b; done;"
+  cm = commit -m  
+    ca = commit --amend --no-edit -a
+  s = status
+  st = stash
+  stp = stash pop
+  rsth = reset --hard
+  cl = clone
+  sui = submodule update --recursive --init
+  surr = submodule update --recursive --remote
