@@ -13,4 +13,23 @@ public class FizzBuzzTest {
 
     assertEquals("not return 1", "1", result);
   }
+
+  @Test
+  public void ifInputIs3ShouldReturnFizz() {
+    FizzBuzz fizzBuzz = new FizzBuzz();
+
+    String result = fizzBuzz.convert(3);
+
+    assertEquals("not return fizz", "fizz", result);
+  }
+
+  @Test
+  public void ifInputIs5ShouldReturnBuzz() {
+    FizzBuzz fizzBuzz = new FizzBuzz();
+
+    String result = fizzBuzz.convert(5);
+
+    assertEquals("not return buzz", "buzz", result);
+  }
+
 }
