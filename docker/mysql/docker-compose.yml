@@ -1,0 +1,26 @@
+# docker-compose up
+
+version: '3.1'
+
+services:
+
+  # user/password: root/root
+  # log to mysql console: docker exec -it springbatchmysql mysql -uroot -proot
+  mysql:
+    image: mysql:8.0.12
+    container_name: springbatchmysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: springbatch
+
+  # W GUI: logujemy się do DB: springbatchmysql
+  adminer:
+    image: adminer
+    container_name: springbatchadminer
+    restart: always
+    ports:
+      - 8080:8080
