@@ -2,8 +2,6 @@ package pl.stacjait.reservation.services;
 
 import org.junit.Before;
 import org.junit.Test;
-import pl.stacjait.reservation.ReservationService;
-import pl.stacjait.reservation.ReservationServiceImpl;
 
 import static org.assertj.core.api.Assertions.*;
 
@@ -11,25 +9,26 @@ public class ReservationServiceTest {
 
   private ReservationService reservationService;
 
+  private int tableCount;
+
   @Before
   public void setUp() {
     reservationService = new ReservationServiceImpl();
+    tableCount = 0;
   }
 
   @Test
   public void shouldReturnNoAvailableTables() {
     int result = reservationService.getNumberOfAvailableTables();
-    assertThat(result).isEqualTo(0);
+    assertThat(result).isEqualTo(tableCount);
   }
 
   @Test
   public void shouldReleaseTable() {
     int initialAmount = reservationService.getNumberOfAvailableTables();
-    int finalAmount = reservationService.releaseTable();
+    reservationService.releaseTable();
+    int countAfterRelease = reservationService.getNumberOfAvailableTables();
 
-    assertThat(finalAmount).isEqualTo(initialAmount + 1);
+    assertThat(countAfterRelease).isEqualTo(initialAmount + 1);
   }
-
-
-
 }

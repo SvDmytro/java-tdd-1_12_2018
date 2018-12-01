@@ -1,8 +1,8 @@
-package pl.stacjait.reservation;
+package pl.stacjait.reservation.services;
 
 public class ReservationServiceImpl implements ReservationService {
 
-  int availableTables;
+  int availableTables = 0;
 
   @Override
   public int getNumberOfAvailableTables() {
@@ -10,8 +10,8 @@ public class ReservationServiceImpl implements ReservationService {
   }
 
   @Override
-  public int releaseTable() {
-    return this.availableTables + 1;
+  public void releaseTable() {
+    this.availableTables++;
   }
 
 }

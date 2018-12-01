@@ -1,8 +1,8 @@
-package pl.stacjait.reservation;
+package pl.stacjait.reservation.services;
 
 public interface ReservationService {
 
   int getNumberOfAvailableTables();
 
-  int releaseTable();
+  void releaseTable();
 }
